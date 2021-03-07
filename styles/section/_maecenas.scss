@@ -1,0 +1,193 @@
+.container  {
+    max-width: 540px;
+    padding: 0 15px;
+    // border: 1px solid #000;
+    margin: 0 auto;
+}
+.maecenas{
+    background-color: rgb(35, 35, 35);
+    padding-bottom: 5px;
+    &__title{
+        text-align: center;
+        h3{
+            font-size: 48px;
+            font-weight: 300;
+            margin: 0;
+            line-height: 65px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            span{
+                color: #D1A954;
+            }
+        }
+    }
+    &__form{
+        margin-top: 60px;
+        &_area{
+            display: grid;
+            grid-template-columns: minmax(100px, 230px) 230px;
+            grid-template-rows: repeat(6, 30px);
+            row-gap: 30px;
+            column-gap: 45px;
+            input{
+                background-color: #444444;
+                border: none;
+                padding: 10px 15px;
+                border: 1px solid #616161;
+                ::placeholder{
+                    color:#989898;
+                }
+            }
+            text-area{
+                grid-column: 1/3;
+                grid-row: 3/5;
+                background: #444444;
+                border: 1px solid #616161;
+                color: #989898;
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            button {
+                grid-column: 1/3;
+                display: block;
+                margin: 0 auto;
+                grid-row: 5;
+                margin-top: 30px;
+                width: 190px;
+                height: 50px;
+                background: #D1A954;
+                color: white;
+                border: none;
+                text-transform: uppercase;
+            }
+        }
+        &_text{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #989898;
+            line-height: 18px;
+        }
+    }
+    &__contacts{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        &_number{
+            text-align: left;
+            p{
+                margin-top: 25px;
+                color:white;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 21px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+        }
+        &_adres{
+            text-align: right;
+            p{
+                text-transform: uppercase;
+                margin-top: 25px;
+                color:white;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 21px;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px){
+    .container {
+        max-width: 720px;
+    }
+    .maecenas{
+        &__form{
+            position: relative;
+            &_area{
+                grid-template-columns: repeat(4, 180px);
+                grid-template-rows: repeat(3, 35px);
+                gap: 20px;
+                text-area{
+                    grid-column: 3/5;
+                    grid-row: 1/3;
+                    width: 270px;
+                }
+                button {
+                    margin-top: 10px;
+                    margin-left: 80px;
+                    grid-column: 3/5;
+                    grid-row: 3;
+                    width: 190px;
+                }
+            }
+            &_text{
+                text-align: left;
+               position: absolute;
+               top: 115px;
+               left: 0;
+               margin-top: 0;
+               display: block;
+               width: 390px;
+            }
+        }
+        &__contacts{
+            margin-top: 50px;
+        }
+    }
+
+}
+@media (min-width: 768px){
+    .container {
+        max-width: 960px;
+    }
+    .maecenas{
+        &__form{
+            width: 690px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }   
+    
+        &__contacts{
+            width: 690px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+        }    
+
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1140px;
+    } 
+    .maecenas{
+        .for-flex{
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .maecenas____form{
+                width: 730px;
+                margin: 0 auto;
+                margin-top: 100px;
+            }   
+        
+            .maecenas__contacts{
+                display: flex;
+                flex-direction: column;
+                width: 350px;
+                grid-row: 1;  
+                &_adres{
+                    text-align: left;
+                    margin-bottom: 50px;
+                }         
+            }    
+        }
+    }
+}

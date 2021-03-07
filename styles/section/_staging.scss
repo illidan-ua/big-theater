@@ -1,0 +1,135 @@
+.container  {
+    max-width: 540px;
+    padding: 0 15px;
+    // border: 1px solid #000;
+    margin: 0 auto;
+}
+.staging{
+    background-color: rgb(35, 35, 35);
+    text-align: center;
+    padding-bottom: 110px;
+    &__fotos{
+        display: none;
+    }
+    h3{
+        font-size: 42px;
+        line-height: 65px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: 0;
+        span{
+            color: #D1A954;
+        }
+    }
+    &__content{
+        margin-top: 70px;
+        position: relative;
+        &_first{
+            overflow: hidden;
+            position: relative;
+            text-align: left;
+            #whole{
+            position: absolute;
+            top: 0;
+            right: -360px;   
+            }
+            #shel, #gram {
+                display: none;
+            }
+        }
+        &_second{
+            display: none;
+        }
+        &_third{
+            display: none;
+        }
+    
+    }
+}
+@media (min-width: 576px){
+    .container {
+        max-width: 720px;
+    }
+    .staging{
+        padding-bottom: 170px;
+        &__content{
+            &_first{
+                #whole{
+                right: -192px;              
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 960px;
+    }
+    .staging {
+        padding-bottom: 170px;
+        &__content{
+        width: 690px;
+        margin: 0 auto;
+        margin-top: 110px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 1140px;
+       
+    }
+    .staging {
+        padding-bottom: 0px;
+        &__fotos {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            h4 {
+                font-size: 42px;
+                line-height: 65px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                font-weight: 300;
+                margin: 0;
+                span{
+                    color: #D1A954;
+                }
+            }
+            &_foto {
+                margin-top: 100px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow: hidden;
+                position:relative;
+            }  
+        }
+        h3 {
+            display: none;
+        }
+
+        &__content {
+            display: none;
+            width: 99%;
+            margin: 0 auto;
+            margin-top: 110px;
+            &_first {
+                overflow: hidden;
+                display: flex;
+                flex-wrap: nowrap;
+                #whole {
+                  position: static;           
+                }
+                #shel, #gram {
+                    display: inline-block;
+                }
+                
+            }
+        }
+    }
+}
+
